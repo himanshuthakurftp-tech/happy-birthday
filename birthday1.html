@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System Access</title>
+
+<style>
+
+body{
+background:black;
+color:#00ff00;
+font-family:monospace;
+font-size:22px;
+padding:30px;
+}
+
+#terminal{
+white-space:pre-line;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="terminal"></div>
+
+<audio id="music">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6c4e6db4d2.mp3?filename=happy-birthday-to-you-119036.mp3">
+</audio>
+
+<script>
+
+let text = [
+
+"Connecting to Secure Server...",
+"Accessing Private Database...",
+"Decrypting Personal Data...",
+"Scanning Memories...",
+"",
+"✔ Target Found",
+"",
+"Name: KIRTI SONI",
+"Status: Very Special Person ❤️",
+"",
+"Loading Birthday Protocol...",
+"",
+"🎉 HAPPY BIRTHDAY KIRTI SONI 🎂",
+"",
+"System Message:",
+"You are one of the most amazing people in the world.",
+"May your life be full of happiness and success.",
+"",
+"End of Transmission..."
+
+];
+
+let i=0;
+let j=0;
+
+function type(){
+
+if(i<text.length){
+
+if(j<text[i].length){
+
+document.getElementById("terminal").innerHTML+=text[i].charAt(j);
+
+j++;
+
+setTimeout(type,40);
+
+}
+
+else{
+
+document.getElementById("terminal").innerHTML+="\n";
+
+i++;
+
+j=0;
+
+setTimeout(type,400);
+
+}
+
+}
+
+else{
+
+document.getElementById("music").play();
+
+}
+
+}
+
+type();
+
+</script>
+
+</body>
+</html>
